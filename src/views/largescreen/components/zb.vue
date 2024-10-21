@@ -7,7 +7,10 @@
       <!-- <div :class="['col-icon', item.icon]">
       </div> -->
       <div class="col-content">
-        <p class="col-num" v-countUp="{ number: data[item.key] || 0 }"></p>
+        <div class="col-num-wrap">
+          <span class="col-num" v-countUp="{ number: data[item.key] || 0 }"></span>
+          <span class="unit">{{ item.unit }}</span>
+        </div>
         <p class="col-title">{{ item.name }}</p>
       </div>
     </div>
@@ -30,21 +33,25 @@ export default {
           name: "工伤亡人事故",
           icon: "date-count-icon",
           key: "gswrsg",
+          unit: '起',
         },
         {
           name: "停产事件",
           icon: "month-count-icon",
           key: "tcsj",
+          unit: '起',
         },
         {
           name: "国家级约谈事件",
           icon: "yesterday-count-icon",
           key: "gjjytsj",
+          unit: '起',
         },
         {
           name: "总经济损失",
           icon: "yesterday-count-icon",
           key: "zjjss",
+          unit: '元',
         },
       ],
     }
@@ -101,14 +108,24 @@ export default {
         line-height: 20px;
         color: #fff;
       }
+      .col-num-wrap {
+        margin-bottom: 18px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      }
 
       .col-num {
         font-size: 38px;
         line-height: 38px;
-        margin-bottom: 18px;
         color: transparent;
         background-image: linear-gradient(to bottom, #1BC0FD, #1EEAF1);
         background-clip: text;
+      }
+      .unit {
+        font-size: 14px;
+        color: #fff;
+        margin-left: 5px;
       }
     }
   }
