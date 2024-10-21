@@ -55,8 +55,8 @@ export default {
   data() {
     return {
       classOption: {
-        step: 1,
-        waitTime: 3000,
+        step: 0.4,
+        waitTime: 4000,
         openWatch: true, // 开启数据实时监控刷新dom
         limitMoveNum: 5,
       },

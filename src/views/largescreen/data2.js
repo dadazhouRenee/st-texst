@@ -4,7 +4,7 @@
 const data = {
   rank1: [
     {
-      name: 'xxx',
+      name: '初始化test数据',
       value: 0
     },
     {

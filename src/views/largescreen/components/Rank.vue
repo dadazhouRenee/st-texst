@@ -3,7 +3,7 @@
 -->
 <template>
   <div class="table-wrap">
-    <scroll-table-wrap :data="listData" ref="scrollTable" :footerHeight="10">
+    <scroll-table-wrap :data="listData" ref="scrollTable" :footerHeight="0">
       <template v-slot:table>
         <el-table class="base-table" :data="listData" style="width: 100%;">
           <el-table-column label="排名" type="index" min-width="80px"></el-table-column>
@@ -146,7 +146,7 @@ export default {
 <style lang="scss" scoped>
 
 .table-wrap {
-  height: 200px;
+  height: 210px;
 
   .base-table {
     width: 100%;
