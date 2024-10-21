@@ -70,10 +70,10 @@ const data = {
     wbft: 1265,
   },
   zb: {
-    gswrsg: 100,
-    tcsj: 100,
-    gjjytsj: 100,
-    zjjss: 200,
+    gswrsg: 0,
+    tcsj: 0,
+    gjjytsj: 0,
+    zjjss: 0,
   },
   xxxt: {
     xtgf: 699,
