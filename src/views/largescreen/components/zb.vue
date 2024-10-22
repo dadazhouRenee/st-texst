@@ -2,7 +2,7 @@
  * @Author: 周冰洁
 -->
 <template>
-  <div class="container">
+  <div class="col-container">
     <div class="col-item" v-for="item in menuList" :key="item.key">
       <!-- <div :class="['col-icon', item.icon]">
       </div> -->
@@ -47,12 +47,12 @@ export default {
           key: "gjjytsj",
           unit: '起',
         },
-        {
-          name: "总经济损失",
-          icon: "yesterday-count-icon",
-          key: "zjjss",
-          unit: '元',
-        },
+        // {
+        //   name: "总经济损失",
+        //   icon: "yesterday-count-icon",
+        //   key: "zjjss",
+        //   unit: '元',
+        // },
       ],
     }
   }
@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
+.col-container {
   display: flex;
   justify-content: space-between;
   padding: 20px 10px;

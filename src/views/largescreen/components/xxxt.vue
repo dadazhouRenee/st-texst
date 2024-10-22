@@ -2,10 +2,10 @@
  * @Author: 周冰洁
 -->
 <template>
-  <div class="container">
+  <div class="col-container">
     <div class="col-item" v-for="item in menuList" :key="item.key">
-      <!-- <div :class="['col-icon', item.icon]">
-      </div> -->
+      <div :class="['col-icon', item.icon]">
+      </div>
       <div class="col-content">
         <p class="col-title">{{ item.name }}</p>
         <div class="num-wrap">
@@ -31,13 +31,13 @@ export default {
       menuList: [
         {
           name: "系统攻防",
-          icon: "date-count-icon",
+          icon: "xxaq",
           key: "xtgf",
           unit: '次',
         },
         {
           name: "信息泄露",
-          icon: "month-count-icon",
+          icon: "xxxl",
           key: "xxxl",
           unit: '条',
         },
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
+.col-container {
   display: flex;
   justify-content: center;
   padding: 20px 10px;
@@ -62,31 +62,27 @@ export default {
     align-items: center;
 
     .col-icon {
-      $width: 64px;
-      $height: 68px;
+      $width: 100px;
+      $height: 64px;
       width: $width;
       height: 100%;
       min-height: $height;
-      margin-right: 14px;
+      margin-right: 20px;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: $width $height;
-      &.date-count-icon {
-        background-image: url('../imgs/date-count-icon.png');
+      background-size: contain;
+      &.xxaq {
+        background-image: url('../imgs/xxaq.png');
       }
 
-      &.month-count-icon {
-        background-image: url('../imgs/month-count-icon.png');
-      }
-
-      &.yesterday-count-icon {
-        background-image: url('../imgs/yesterday-count-icon.png');
+      &.xxxl {
+        background-image: url('../imgs/xxxl.png');
       }
     }
 
     .col-content {
       width: 100%;
-      text-align: center;
+      // text-align: center;
       p {
         margin: 0;
       }
@@ -104,7 +100,7 @@ export default {
         color: transparent;
         background-image: linear-gradient(to bottom, #1BC0FD, #1EEAF1);
         background-clip: text;
-        text-align: center;
+        // text-align: center;
         // width: 100%;
         // min-height: 100px;
         // display: flex;
@@ -119,7 +115,7 @@ export default {
         display: flex;
         align-items: flex-end;
         width: 100%;
-        justify-content: center;
+        // justify-content: center;
 
       }
     }

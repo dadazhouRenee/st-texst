@@ -2,7 +2,7 @@
  * @Author: 周冰洁
 -->
 <template>
-  <div class="container">
+  <div class="col-container">
     <div class="col-item" v-for="item in menuList" :key="item.key">
       <div :class="['col-icon', item.icon]">
       </div>
@@ -37,7 +37,7 @@ export default {
           key: "yzg",
         },
         {
-          name: "未整改",
+          name: "待整改",
           icon: "yesterday-count-icon",
           key: "wzg",
         },
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
+.col-container {
   display: flex;
   justify-content: space-between;
   padding: 20px 10px;

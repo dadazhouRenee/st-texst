@@ -15,12 +15,12 @@
         <div class="content">
           <div class="content-left">
             <div class="base-col">
-              <col-container title="省区排名">
+              <col-container title="省区风险度">
                 <Rank :listData="rank1"></Rank>
               </col-container>
             </div>
             <div class="base-col">
-              <col-container title="中心排名">
+              <col-container title="中心风险度">
                 <Rank :listData="rank2"></Rank>
               </col-container>
             </div>
@@ -130,7 +130,7 @@ export default {
   },
   mounted() {
     // TO DO...
-    // this.startLoop();
+    this.startLoop();
     setTimeout(() => {
       this.initData(testData);
     }, 100)
@@ -218,7 +218,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$navHeight: 60px;
+$navHeight: 64px;
 $white: #fff;
 $base-font-size: 14px;
 $middle-font-size: 16px;
@@ -324,8 +324,8 @@ $large-font-size: 20px;
 
         .system-icon {
           display: inline-block;
-          width: 128px;
-          height: 32px;
+          width: 150px;
+          height: 40px;
           background: url("./imgs/system-icon.png") no-repeat center;
           background-size: cover;
           margin-right: 8px;
@@ -348,10 +348,11 @@ $large-font-size: 20px;
         .time {
           color: var(--primary-color);
           margin-right: 20px;
+          font-size: 18px;
         }
 
         .svg-icon {
-          font-size: 22px;
+          font-size: 26px;
           cursor: pointer;
         }
       }

@@ -2,8 +2,8 @@
  * @Author: 周冰洁
 -->
 <template>
-  <div class="container">
-    <div class="col-item" v-for="item in menuList" :key="item.key">
+  <div class="col-col-container">
+    <div class="col-item" :class="['bg-icon', item.icon]" v-for="item in menuList" :key="item.key">
       <!-- <div :class="['col-icon', item.icon]">
       </div> -->
       <div class="col-content">
@@ -28,17 +28,17 @@ export default {
       menuList: [
         {
           name: "正面舆情",
-          icon: "date-count-icon",
+          icon: "zm",
           key: "zmyq",
         },
         {
           name: "负面舆情",
-          icon: "month-count-icon",
+          icon: "fm",
           key: "fmyq",
         },
         {
           name: "外部访谈",
-          icon: "yesterday-count-icon",
+          icon: "ft",
           key: "wbft",
         },
       ],
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
+.col-col-container {
   display: flex;
   justify-content: space-between;
   padding: 20px 10px;
@@ -60,6 +60,20 @@ export default {
     padding: 0 15px;
     display: flex;
     align-items: center;
+    &.bg-icon {
+      background-position: 75% center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      &.fm {
+        background-image: url('../imgs/fm.png');
+      }
+      &.zm {
+        background-image: url('../imgs/zm1.png');
+      }
+      &.ft {
+        background-image: url('../imgs/ft.png');
+      }
+    }
 
     .col-icon {
       $width: 64px;
@@ -93,6 +107,7 @@ export default {
         font-size: 18px;
         line-height: 20px;
         color: #fff;
+        text-align: center;
       }
 
       .col-num {
