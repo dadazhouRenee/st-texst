@@ -173,7 +173,7 @@ export default {
         });
         this.$refs.chart3.initChart({
           data: {
-            mapData: [],
+            mapData: rank1,
           }
         });
       })

@@ -74,7 +74,7 @@ export default {
           console.log("文件解析报错", err);
         };
       });
-      // console.log("读取出的流文件", dataBinary);
+      console.log("读取出的流文件", dataBinary);
 
       /**
        * 2. 使用xlsx插件去解析已经读取好的二进制excel流文件
