@@ -30,7 +30,6 @@ export default {
      */
     initChart(data = {}) {
       const { data: { series = [], yData = [] } } = data;
-      console.log('监管', data)
       this.$refs.doubleBarChart.initChart({
           name: '监管',
           series,

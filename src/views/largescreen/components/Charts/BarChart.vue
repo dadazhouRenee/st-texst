@@ -94,7 +94,8 @@ export default {
         grid: {
           top: '25%',
           // left: Math.max(...data.yData).toString().length * 10,
-          bottom: data?.other?.rotate > 0 ? 60 : 30,
+          // bottom: data?.other?.rotate > 0 ? 40 : 30,
+          bottom: 40,
           right: 10,
           ...(data.other?.grid || {}),
         },
@@ -104,12 +105,13 @@ export default {
             interval: 0,
             textStyle: {
               fontSize: 12,
+              lineHeight: 14,
               color: '#fff'
             },
             rotate: data.other.rotate,
             formatter: function (value) {
               // const middle = Math.floor(value.length / 2)
-              if (value.length > 3 && data.other.rotate > 0) {
+              if (value.length > 3) {
                 value = value.replace(/(.{4})/g, '$1\n')
                 return value
               } else {

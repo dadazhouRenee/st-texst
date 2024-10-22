@@ -175,6 +175,9 @@ export default {
               fontWeight: 'bold',
               // fontSize: 14,
               color: '#fff',
+              formatter: (item) => {
+                return item.value || ''
+              }
             },
             barMaxWidth: 25,
             // barMinHeight: 3,

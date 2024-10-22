@@ -31,7 +31,6 @@ export default {
      */
     initChart(data = {}) {
       const { data: { xData = [], yData = [] } } = data;
-      console.log('违规', data)
       this.$refs.barChart.initChart({
           name: '违规',
           // xData: ['1#号', '2#号', '3#号', '4#号'],
@@ -44,6 +43,7 @@ export default {
             },
             title: '',
             show: false, // 是否展示 默认为true,
+            // rotate: 2,
             yAxisName: '数量',
             yAxisLine: {
               show: true,

@@ -142,8 +142,8 @@ export default {
     initData(data) {
       const { rank1 = [], rank2 = [], yh = {}, px = {}, yq = {}, xxxt = {}, zb = {}, wg = [], jg = [] } = (data || {});
       console.log('initData====', data)
-      this.rank1 = rank1;
-      this.rank2 = rank2;
+      this.rank1 = rank1.sort((a, b) => b.value - a.value);
+      this.rank2 = rank2.sort((a, b) => b.value - a.value);
       this.yh = yh;
       this.px = px;
       this.yq = yq;
@@ -171,22 +171,12 @@ export default {
             yData: jg.map(item => item.name),
           }
         });
-        console.log('this.$refs.chart3', this.$refs.chart3.initChart)
         this.$refs.chart3.initChart({
           data: {
             mapData: [],
           }
         });
       })
-      // this.$nextTick(() => {
-      //   console.log('chart1', this.$refs.chart1)
-      //   this.$refs.chart1.initChart({
-      //     data: {
-      //       xData: wg.map(item => item.name),
-      //       yData: wg.map(item => item.value),
-      //     }
-      //   });
-      // });
     },
     // restData() {
     //   this.rank1 = [];
@@ -201,9 +191,12 @@ export default {
         this.time = formatDate(null, true);
       }, 1000);
       // 大屏接口定时器
-      this.pollingInitData = setInterval(() => {
-        this.initData(testData);
-      }, 2000);
+      // this.pollingInitData = setInterval(() => {
+      //   // this.initData(testData);
+      //   this.$demoDataBase.getItem("shengtong").then((res) => {
+      //     this.initData(res);
+      //   });
+      // }, 2000);
     },
     stopLoop() {
       if (this.timer) clearInterval(this.timer);
