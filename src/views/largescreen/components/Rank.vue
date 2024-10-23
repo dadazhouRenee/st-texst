@@ -8,7 +8,7 @@
         <el-table class="base-table" :data="listData" style="width: 100%;">
           <el-table-column label="排名" type="index" min-width="80px"></el-table-column>
           <el-table-column label="名称" prop="name" min-width="160px"></el-table-column>
-          <el-table-column label="分数" prop="value" min-width="80px">
+          <el-table-column label="风险度" prop="value" min-width="80px">
           </el-table-column>
         </el-table>
       </template>

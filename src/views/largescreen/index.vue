@@ -6,7 +6,7 @@
           <div class="mh-left">
             <span class="system-icon"></span>
           </div>
-          <span class="system-name" @click="toConfig">智慧管理平台</span>
+          <span class="system-name" @click="toConfig">双十一安全风控监控平台</span>
           <div class="mh-right">
             <span class="time">{{ time }}</span>
             <screenfull></screenfull>
