@@ -103,7 +103,7 @@ export default {
       let wgSheet = workBook.Sheets[workBook.SheetNames[2]];
       const wgHeader = this.getHeaderRow(wgSheet);
       const wgData = xlsx.utils.sheet_to_json(wgSheet);
-      const xData = wgHeader.slice(3, -1);
+      const xData = wgHeader.slice(3, 11);
       const wg = xData.map(name => {
         return {
           name,
