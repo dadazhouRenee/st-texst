@@ -191,12 +191,12 @@ export default {
         this.time = formatDate(null, true);
       }, 1000);
       // 大屏接口定时器
-      // this.pollingInitData = setInterval(() => {
-      //   // this.initData(testData);
-      //   this.$demoDataBase.getItem("shengtong").then((res) => {
-      //     this.initData(res);
-      //   });
-      // }, 2000);
+      this.pollingInitData = setInterval(() => {
+        // this.initData(testData);
+        this.$demoDataBase.getItem("shengtong").then((res) => {
+          this.initData(res);
+        });
+      }, 2000);
     },
     stopLoop() {
       if (this.timer) clearInterval(this.timer);
