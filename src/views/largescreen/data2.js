@@ -94,40 +94,40 @@ const data = {
     },
     {
       name: '类型3',
-      value: 65
+      value: 0
     },
     {
       name: '类型4',
-      value: 34
+      value: 0
     },
     {
       name: '类型5',
-      value: 23
+      value: 0
     },
     {
       name: '类型6',
-      value: 95
+      value: 0
     },
     {
       name: '类型7',
-      value: 35
+      value: 0
     },
   ],
   jg: [
     {
       name: '约谈',
-      zx: 100,
-      wd: 200,
+      zx: 0,
+      wd: 0,
     },
     {
       name: '整改',
-      zx: 80,
-      wd: 170,
+      zx: 0,
+      wd: 0,
     },
     {
       name: '处罚',
-      zx: 210,
-      wd: 90,
+      zx: 0,
+      wd: 0,
     },
   ]
 }

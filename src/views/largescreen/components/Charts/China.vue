@@ -9,7 +9,7 @@
 import * as echarts from "echarts";
 import resize from "./mixins/resize";
 import ChinGeo from './China.json';
-import { ceil, max } from 'lodash';
+import { ceil, max, round } from 'lodash';
 
 const MapName = 'China';
 
@@ -73,16 +73,18 @@ export default {
         }
         return item
       });
-      console.log('_mapData', _mapData)
+      const maxLength = ceil(maxV).toString().length;
+      console.log('_mapData', maxV, maxLength, round(maxV, -maxLength))
       const option = {
         visualMap: {
           min: 0,
-          max: ceil(maxV, -1),
+          max: round(maxV, -maxLength),
           left: 'left',
           top: 'bottom',
           text: ['高', '低'],//取值范围的文字
           inRange: {
-            color: ['#1046F6', '#00FFF6']//取值范围的颜色
+            // color: ['#1046F6', '#00FFF6']//取值范围的颜色
+            color: ['#52C41A', '#f2f523', '#F5A623', '#F5222D']//取值范围的颜色
             // color: ['#e0ff00', '#006e00']//取值范围的颜色
           },
           show: true, //图注
@@ -112,7 +114,7 @@ export default {
               borderColor: 'rgba(0, 0, 0, 0.2)'
             },
             emphasis: {
-              areaColor: '#F3B329',//鼠标选择区域颜色
+              areaColor: '#00e5ff',//鼠标选择区域颜色
               shadowOffsetX: 0,
               shadowOffsetY: 0,
               shadowBlur: 20,

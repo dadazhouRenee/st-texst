@@ -105,6 +105,7 @@ export default {
         xAxis: {
           type: 'value',
           // boundaryGap: [0, 0.01],
+          minInterval: 1,
           axisLabel: {
             interval: 0,
             textStyle: {

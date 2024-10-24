@@ -170,6 +170,18 @@ export default {
               // 越往后的数据时长越大
               return 1000 + idx * 50;
             },
+            label: {
+              show: true,
+              distance: 5,
+              position: 'insideTop',
+              align: 'center',
+              // verticalAlign: 'middle',
+              fontWeight: 'bold',
+              color: '#fff',
+              formatter: (item) => {
+                return item.value || ''
+              }
+            },
             itemStyle: {
               normal: {
                 color: function (params) {
